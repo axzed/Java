@@ -1,0 +1,54 @@
+day29课堂笔记
+
+1、List接口中的常用方法。
+	List是Collection接口的子接口。所以List接口中有一些特有的方法。
+		void add(int index, Object element)
+		Object set(int index, Object element)
+		Object get(int index)
+		int indexOf(Object o)
+		int lastIndexOf(Object o)
+		Object remove(int index)
+2、迭代器迭代元素的过程中不能使用集合对象的remove方法删除元素，
+要使用迭代器Iterator的remove方法来删除元素，防止出现异常：
+	ConcurrentModificationException
+
+3、ArrayList
+	ArrayList集合初始化容量10
+	扩容为原容量1.5倍。
+	底层是数组。
+
+	数组优点和缺点要能够说出来！
+	另外要注意：ArrayList集合末尾增删元素效率还是可以的。
+
+4、链表数据结构
+	第一：单向链表和双向链表数据结构要理解。
+	第二：链表数据结构的优点和缺点要能够说出来。
+
+5、Vector：
+	Vector初始化容量是10.
+	扩容为原容量的2倍。
+	底层是数组。
+	Vector底层是线程安全的。
+
+	怎么得到一个线程安全的List：
+		Collections.synchronizedList(list);
+
+6、JDK5.0新特性：泛型
+	第一：集合使用泛型来减少向下转型的操作。
+	第二：怎么使用泛型？
+	第三：怎么自定义泛型？
+
+7、JDK5.0新特性：
+	foreach
+	对数组怎么遍历？
+		for(int i : arr){
+			System.out.println(i);
+		}
+	对集合怎么遍历？
+		for(String s : list){
+			System.out.println(s);
+		}
+
+8、JDK8新特性：钻石表达式
+	List<String> list = new ArrayList<>();
+	类型自动推断！
