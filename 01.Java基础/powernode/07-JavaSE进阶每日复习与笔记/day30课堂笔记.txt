@@ -1,0 +1,39 @@
+day30课堂笔记
+
+1、掌握Map接口中常用方法。
+
+2、遍历Map集合的两种方式都要精通。
+	第一种：获取所有key，遍历每个key，通过key获取value.
+	第二种：获取Set<Map.Entry>即可，遍历Set集合中的Entry
+		调用entry.getKey() entry.getValue()
+
+3、了解哈希表数据结构。
+
+4、存放在HashMap集合key部分和HashSet集合中的元素需要同时重写hashCode和equals。
+
+5、HashMap和Hashtable的区别。
+	HashMap：
+		初始化容量16，扩容2倍。
+		非线程安全
+		key和value可以为null。
+
+	Hashtable
+		初始化容量11，扩容2倍+1
+		线程安全
+		key和value都不能是null。
+
+6、Properties类的常用两个方法。
+	setProperty
+	getProperty
+
+7、了解自平衡二叉树数据结构。
+	左小右大原则存储。
+	中序遍历方式。
+
+8、TreeMap的key或者TreeSet集合中的元素要想排序，有两种实现方式：
+	第一种：实现java.lang.Comparable接口。
+	第二种：单独编写一个比较器Comparator接口。
+
+9、集合工具类Collections:
+	synchronizedList方法
+	sort方法（要求集合中元素实现Comparable接口。）
